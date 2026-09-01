@@ -1,10 +1,15 @@
-# First i Make a directory
+- name: Install Nginx on Pathnex server
+  hosts: all
+  become: yes
 
-# Then created a folder mkdir Batch_Name_Pathnex
+  tasks:
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present
 
-#then
-i Created two folders mkdir timings , mkdir coding-practice under the directory
+docker --version
+docker run ubuntu echo "Hello Pathnex"
 
-#push it into github
-git push -u origin main
-
+FROM ubuntu:22.04
+CMD ["echo", "Hello Pathnex"]
