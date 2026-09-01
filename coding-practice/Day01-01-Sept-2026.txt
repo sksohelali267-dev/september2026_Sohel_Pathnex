@@ -1,0 +1,9 @@
+#Makin a directory
+
+mkdir Batch_Name_Pathnex
+
+#then
+Create two folders mkdir timings , mkdir coding-practice under the directory
+
+#push it into github
+
