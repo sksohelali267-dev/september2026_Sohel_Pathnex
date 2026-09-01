@@ -8,3 +8,4 @@ i have learned about devops tools and their usage in devops like linux, git and 
 
 ## Tomorrow's Task
 # Practing linux commands
+# Giving mock in evening call
