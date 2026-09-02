@@ -1,0 +1,7 @@
+ls
+cd , cd ..
+pwd
+mkdir
+cp
+rmdir
+rm -r
