@@ -1,0 +1,20 @@
+Today, I learned and practiced some important Linux commands and concepts:
+ 🔹 "chmod" → Change file permissions 
+ 🔹 "r=4, w=2, x=1" → Permission values
+ 🔹 "sudo -i" → Switch to root user
+ 🔹 "cp" → Copy files
+ 🔹 "mv" → Move/Rename files
+ 🔹 "cat" → Display file content
+ 🔹 "head" → Show top lines
+ 🔹 "tail" → Show bottom lines
+ 🔹 "tail -f" → Monitor live logs
+ 🔹 "chown" → Change file owner
+ 🔹 "ln" → Create hard link
+ 🔹 "ln -s" → Create soft link
+ 🔹 "ls -la" → Show detailed & hidden files
+ 🔹 "grep" and find also → Search text
+
+i have practiced those commands for 1 hour and also watched extra videos on linux
+
+watched a series 1 hour
+ praparing for evening class
