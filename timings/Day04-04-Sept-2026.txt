@@ -1,0 +1,7 @@
+Today, I continued my learning journey with Terraform and Linux.
+
+I learned how to create an AWS EC2 instance using Terraform and understood some of the important Terraform commands like `terraform plan` and `terraform destroy`.
+
+Along with Terraform, I also explored several useful Linux commands and utilities such as `awk`, `sed`, `uname`, `df -h`, `du -h`, `find`, `umask`, `history`, `head`, `tail`, `chgrp`, `tar`, `zip`, and `gzip`. I also learned how to manage and delete command history in Linux.
+
+Then i watched again some videos regarding linux
