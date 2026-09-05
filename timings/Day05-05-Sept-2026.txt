@@ -1,0 +1,10 @@
+Today, I learned and explored several important concepts related to Terraform, AWS, and Linux.
+
+I practiced creating an AWS EC2 instance using Terraform and learned how to use commands like `terraform plan` and `terraform destroy. I also learned about enabling root access using a key, data mounting, vertical scaling, and file synchronization using `rsync`.
+
+On the Linux side, I explored useful commands and concepts such as `lsblk`, `wget`, `ping`, `curl`, `netstat`, `useradd`, `passwd`, `groupadd`, `alias`, and inode. I also learned about zombie processes, cron jobs, daemons, and how to manage and delete command history.
+
+Additionally, I practiced commands like `head`, `tail`, `chgrp`, `tar`, `zip`, and `gzip` for file management and compression.
+
+It was a great learning session with a mix of cloud infrastructure, Terraform, and Linux system administration. There are many concepts to practice, but each session is helping me build a stronger foundation and better understanding of DevOps.
+
