@@ -1,0 +1,22 @@
+ Joined the morning session with neeraj bhaiya
+
+Learned about Git and Github how we can push codes pull codes and work in real time 
+
+codes like 
+git add .
+Git Stash & Pop
+Git Revert
+Git Pull
+Git branch -b new branch
+
+Also learned concept of
+Fetch, Pull, Push, Clone & Fork 
+Remote repository with git remote -v 
+Understanding HEAD and Git logs,git cherry and hot fix
+
+then i had my breakfast 
+
+Revising the old linux chapters along with new chapters
+
+try to write codes for 1 hour and undertsand the codes
+
