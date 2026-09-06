@@ -1,0 +1,10 @@
+# What I did today
+i have learned about devops tools and their usage in devops like linux, git and github , terraform, ansible , kubernetes, Argocd
+
+# an hour - Revised Todays morning session video, alon with created a github account and Create my 1st repo
+
+# 1 hours English speaking/watching movies
+# Doin the neeraj bhai given task learned about ipv4 , ip address, subnet mask
+
+## Tomorrow's Task
+# Practing linux commands
