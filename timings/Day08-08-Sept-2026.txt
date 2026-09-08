@@ -1,0 +1,9 @@
+# What I did today
+i have learned about AWS tools Like , S3 , Session manager , Aws Sheild, route 53, cloudtrail, cloudwatch, 
+
+# an hour - Revised Todays morning session video, and Create my todays repo and pushed my todays code
+
+# 1 hours English speaking/watching movies
+
+## Tomorrow's Task
+# Practing linux commands, revise aws chaptera again
