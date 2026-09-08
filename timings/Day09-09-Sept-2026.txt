@@ -1,0 +1,18 @@
+ay 9 of class AWS
+
+#Today i joined morning Session
+#Todays Session is Regardin Aws Tools
+
+#We covered new tools and topica in todays session
+#Session manager
+#AWS Sheild
+#AWS WAF
+#CLOUDWATCH
+#CLOUDTRAIL
+#VPC
+#DNS
+#LAMBDA
+
+#Then write code foe 30 minutues in terminal and pushwd into github and raised PR to Pathnex Team
+
+
