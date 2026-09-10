@@ -1,0 +1,21 @@
+ay 9 of class AWS
+
+#Today i joined morning Session
+#Todays Session is Regardin Aws Tools
+
+#We covered new tools and topica in todays session 
+#AMAZON DYNAMO DB
+#RDS AND AURORA
+#AMAZON KEY MANAGEMENT TOOLS
+#AWS EBS
+#AWS AMAZON CODEBUILD
+#SESSION MANAGER
+#EFS
+#VPC
+#CLOUDFRONT
+#SNOWBALL
+#AMAZON CODEPIPELINE
+
+#Then write code foe 30 minutues in terminal and pushwd into github and raised PR to Pathnex Team
+
+
