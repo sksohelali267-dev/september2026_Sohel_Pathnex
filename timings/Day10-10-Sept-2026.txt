@@ -1,0 +1,12 @@
+#Joined morning session
+
+learnwd about Docker
+Docker Ps
+Docker build
+Docker run
+Docker image
+Docker file
+
+Practicing the codes 
+push todays task into github
+
