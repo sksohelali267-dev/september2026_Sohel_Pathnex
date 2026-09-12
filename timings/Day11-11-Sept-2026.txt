@@ -1,0 +1,12 @@
+#Joined Morning Session
+#Start with kubernetes
+
+Kubernetws
+controlplane
+nodes
+worker nodes
+pods
+cluster
+container
+
+after that i have revised the kubernetes architecture
