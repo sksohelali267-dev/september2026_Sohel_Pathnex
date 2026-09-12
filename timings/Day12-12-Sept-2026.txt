@@ -1,0 +1,7 @@
+#Joined Todays session at morning
+
+Today's session focused on Kubernetes and its practical concepts. I learned about the Kubernetes version lifecycle, pod lifecycle, nodes and node groups, namespaces, and scaling using HPA and VPA.
+
+I also explored Kubernetes deployments, rollout and rollback, pod status, and basic Kubernetes troubleshooting. Understanding how deployments are managed, applications are scaled, and issues are identified and resolved gave me a better idea of how Kubernetes is used in real-world environments.
+
+It was a great hands-on learning session and helped me build a stronger foundation in Kubernetes and DevOps.
