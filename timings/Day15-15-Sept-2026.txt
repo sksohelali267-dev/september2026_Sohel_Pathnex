@@ -1,0 +1,11 @@
+### Today’s Tasks
+
+* Joined Morning session learned about ststefull set,daemonset,nnodeport.
+* Revised **Kubernetes videos.
+* Watched **Kubernetes videos** and continued learning.
+* Tried to create an **AWS EKS cluster**.
+* Faced errors during EKS creation, **troubleshot and fixed the issues**.
+* Learned from the EKS errors and understood the required configuration.
+* Pushed **today’s code to GitHub**.
+* Recorded and sent my **introduction video on Telegram**.
+
