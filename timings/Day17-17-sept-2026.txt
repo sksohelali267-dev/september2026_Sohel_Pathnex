@@ -1,0 +1,5 @@
+today!
+ We covered the *fundamentals of Kubernetes* and the critical role of *Helm* in modern DevOps workflows. 
+ Key takeaways included the structure of *Helm Charts* (*Chart.yaml* and values.yaml*), 
+ how to efficiently manage application deployments using *repositories like Bitnami*, 
+ and the importance of **version control* for stable releases and *rollbacks*.
