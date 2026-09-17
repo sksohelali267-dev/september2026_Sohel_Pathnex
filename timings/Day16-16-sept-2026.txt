@@ -1,0 +1,11 @@
+#Joined Morning session
+ 
+Todays we learned extrea tools about kubernetes also learnt about helm charts
+
+affinity , anti-affinity
+statefullsets, Daemn sets
+Taint and Tolerations
+
+Push todays code into Github
+Practice Todays session 
+
