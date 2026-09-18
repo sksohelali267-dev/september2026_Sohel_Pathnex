@@ -1,0 +1,11 @@
+Day - 18 
+
+#Today i joined neerajbhaiya session
+#todays topics
+ Argo cd
+ Kubernetes 
+ Helm upgrade
+
+Pushed the code into github
+practice the yaml codes
+ 
