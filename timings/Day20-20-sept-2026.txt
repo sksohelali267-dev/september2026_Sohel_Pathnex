@@ -1,0 +1,7 @@
+#In todays session we have see trraform demo
+
+command like terraform plan, terraform init, terraform validate, terraform , terragrant, opentofu
+
+# i rewtch videos
+#pushed codes into github
+# Doing live demo with terraform, and argocd project
