@@ -1,0 +1,9 @@
+Watched august terraform video
+
+## Practice the terraform with eks
+## Joined evening session
+## Learned about terrafrom
+   terraform init
+   terraform apply
+   terraform plan
+## practinge codes
