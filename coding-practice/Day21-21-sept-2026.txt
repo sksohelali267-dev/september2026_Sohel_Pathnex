@@ -1,6 +1,6 @@
 Ansible — Backup and Restore Files
 
-  yaml
+```yaml
 - name: Backup and Restore Files
   hosts: all
   become: yes
@@ -15,11 +15,11 @@ Ansible — Backup and Restore Files
 
     - name: Restore backup from remote server
       command: tar -xzvf /tmp/etc-backup.tar.gz -C /
-
+```
 
 Terraform — Create S3 Bucket with Cross-Region Replication
 
-  hcl
+```hcl
 resource "aws_s3_bucket" "sohel_bucket" {
   bucket = "sohel-backup-bucket"
   region = "us-east-1"
@@ -43,11 +43,11 @@ resource "aws_s3_bucket_object" "sohel_backup_file" {
   key    = "backup.tar.gz"
   source = "sohel-backup.tar.gz"
 }
-
+```
 
 Kubernetes — Disaster Recovery with Persistent Volumes
 
-  yaml
+```yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -77,11 +77,11 @@ spec:
       resources:
         requests:
           storage: 5Gi
-
+```
 
 Jenkinsfile — Backup Strategy for Jenkins Workspace
 
-  groovy
+```groovy
 pipeline {
     agent any
     stages {
@@ -99,11 +99,11 @@ pipeline {
         }
     }
 }
-
+```
 
 GitLab CI/CD — Backup and Restore Deployment Files
 
-  yaml
+```yaml
 stages:
   - backup
   - restore
@@ -117,11 +117,11 @@ restore:
   stage: restore
   script:
     - tar -xzvf /tmp/backup.tar.gz -C kubernetes/
-
+```
 
 Docker
 
-   yaml
+```yaml
 # Docker Compose
 version: '3'
 services:
@@ -130,5 +130,5 @@ services:
     container_name: sohel-nginx
     ports:
       - "80:80"
-
+```
 
