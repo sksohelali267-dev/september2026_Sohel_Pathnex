@@ -1,0 +1,6 @@
+#revised the terraform 
+
+# I have did a practical demo of terraform
+
+# give the explanation in evening class
+
