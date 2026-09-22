@@ -1,0 +1,11 @@
+# In todayi joined mornig session of neeraj bhaiya
+# tried to see extra things about ansible
+# lerned how ansible works
+  
+# troubleshoot some issues like 
+  python configuration mismatch
+  ec2-name mistmatch
+  not correct dependencies
+
+Push todeays task into github repo
+
