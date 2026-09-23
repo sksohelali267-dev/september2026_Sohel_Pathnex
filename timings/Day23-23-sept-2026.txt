@@ -1,0 +1,11 @@
+ #Today i joined neeraj bhiaya's Morning sessison
+
+#today i learned lot of things about jekins 
+topics covered
+
+Pipeline Implementation
+Tooling & Infrastructure
+Pipeline Architecture
+CI/CD Fundamentals: 
+ #push todays task into github 
+ #revise ansible and jenkins 
