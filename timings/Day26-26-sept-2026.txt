@@ -1,0 +1,9 @@
+Joined the morning session 
+
+in todays session i ahve leraned about the elk stack 
+monitoring, dashboard creation, 
+Terraform,
+
+i revised again this elk stack 
+pushed todays code into github
+
