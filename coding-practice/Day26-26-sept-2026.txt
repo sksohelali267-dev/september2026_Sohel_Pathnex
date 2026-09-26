@@ -1,0 +1,83 @@
+- name: Implement SSH Key Authentication
+  hosts: all
+  become: yes
+  tasks:
+    - name: Generate SSH key pair
+      command: ssh-keygen -t rsa -b 2048 -f /home/user/.ssh/id_rsa -N ""
+
+    - name: Add SSH public key to authorized_keys
+      authorized_key:
+        user: user
+        state: present
+        key: "{{ lookup('file', '/home/user/.ssh/id_rsa.pub') }}"
+
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: sohel-web-policy
+spec:
+  podSelector:
+    matchLabels:
+      app: sohel-web-app
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: sohel-api
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              app: sohel-database
+
+pipeline {
+    agent any
+
+    environment {
+        AWS_ACCESS_KEY_ID = credentials('aws-access-key')
+        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building Docker image...'
+                docker.build('sohel-web-app')
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying to AWS EC2...'
+                sh 'aws ec2 run-instances --image-id ami-0abcd1234 --count 1 --instance-type t2.micro'
+            }
+        }
+    }
+}
+
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - docker build -t sohel-web-app .
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying with secure credentials"
+    - aws ec2 run-instances --image-id ami-0abcd1234 --count 1 --instance-type t2.micro --access-key $AWS_ACCESS_KEY --secret-key $AWS_SECRET_KEY
+
+
+
+docker logs sohel-nginx
+docker inspect sohel-nginx
+
+
