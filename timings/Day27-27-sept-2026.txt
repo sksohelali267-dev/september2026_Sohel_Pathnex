@@ -1,0 +1,6 @@
+#Today i Joined the morning session of neeraj bhaiya 
+#Learned about kafka 
+#launched kafka in ui
+# Joined evening session of kubernetes upgrade
+#troubleshooting the logs 
+
