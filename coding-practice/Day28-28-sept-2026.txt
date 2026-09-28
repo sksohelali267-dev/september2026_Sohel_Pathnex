@@ -1,0 +1,57 @@
+# Day 28 — Advanced Networking with VPCs and Peering
+
+## Ansible
+
+  yaml
+- name: Setup VPC Peering Between Accounts
+  hosts: localhost
+  tasks:
+    - name: Create VPC peering connection
+      command: aws ec2 create-vpc-peering-connection --vpc-id vpc-12345678 --peer-vpc-id vpc-87654321
+
+
+## Terraform
+
+hcl
+resource "aws_vpc_peering_connection" "sohel_peering" {
+  vpc_id      = aws_vpc.sohel_vpc.id
+  peer_vpc_id = aws_vpc.peer_vpc.id
+}
+
+resource "aws_route" "sohel_route" {
+  route_table_id            = aws_route_table.sohel_rt.id
+  destination_cidr_block    = "10.0.0.0/16"
+  vpc_peering_connection_id = aws_vpc_peering_connection.sohel_peering.id
+}
+
+
+## Kubernetes
+
+yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: sohel-vpc-policy
+spec:
+  podSelector:
+    matchLabels:
+      app: sohel-app
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: sohel-db
+
+
+## Docker
+
+bash
+docker save -o sohel-nginx.tar sohel-nginx
+
+docker load -i sohel-nginx.tar
+
+## Bash
+
+bash
+docker run --rm -v sohel-volume:/data -v $(pwd):/backup ubuntu tar czf /backup/sohel-backup.tar.gz /data
+
