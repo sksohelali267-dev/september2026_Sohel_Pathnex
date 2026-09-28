@@ -1,0 +1,6 @@
+#### Day- 28 
+# Tody i joined neeraj bhaiy's session
+# i learned about ssl,tls,netwoking
+# we also see a practical demonstration of ssl certificate and nginx application
+# revised agarin
+# complete todays task to push in github
