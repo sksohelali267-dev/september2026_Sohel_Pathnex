@@ -1,0 +1,5 @@
+#Joined Morning session
+# today i learned about sre
+#what is sla,sli,slo.
+#Job roles of sre
+#Pushed todays task into github
