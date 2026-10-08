@@ -1,0 +1,9 @@
+I watched todays session video of neeraj bhaiya
+Its All about the network and security part
+
+Today i learned about 
+aws sheild, Aws waf, Aws network protocol
+
+Also i revist the kubernetes upgrade , Helm chart
+
+Pushed the code into github repo
