@@ -1,0 +1,153 @@
+Day 08 — Variables, VPC, Probes, Loops
+Ansible — Install Packages Using Variables
+
+Today I learned how to use variables in Ansible to install multiple packages.
+
+---
+- name: Install packages for sohel using variables
+  hosts: all
+  become: yes
+
+  vars:
+    sohel_packages:
+      - tree
+      - unzip
+      - vim
+
+  tasks:
+    - name: Install required packages
+      yum:
+        name: "{{ sohel_packages }}"
+        state: present
+
+Terraform — Create VPC and Subnet
+
+I learned how to create an AWS VPC and subnet using Terraform.
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_vpc" "sohelVPC" {
+  cidr_block = "10.10.0.0/16"
+
+  tags = {
+    Name = "sohel-VPC"
+  }
+}
+
+resource "aws_subnet" "sohelSubnet" {
+  vpc_id                  = aws_vpc.sohelVPC.id
+  cidr_block              = "10.10.1.0/24"
+  map_public_ip_on_launch = true
+
+  tags = {
+    Name = "sohel-Subnet"
+  }
+}
+
+Kubernetes — Add Liveness and Readiness Probes
+
+I learned how to add liveness and readiness probes to a Kubernetes Pod. These probes help Kubernetes check whether the application is running properly and ready to receive traffic.
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sohel-probe-pod
+spec:
+  containers:
+    - name: web
+      image: nginx
+      livenessProbe:
+        httpGet:
+          path: /
+          port: 80
+        initialDelaySeconds: 5
+      readinessProbe:
+        httpGet:
+          path: /
+          port: 80
+        initialDelaySeconds: 3
+
+Shell Script — Loop Through a List
+
+I learned how to use a for loop in a shell script to iterate through multiple items.
+
+#!/bin/bash
+
+for item in sohel DevOps Training; do
+  echo "Item: $item"
+done
+
+Conditional Stages
+Jenkins Pipeline — Conditional Execution
+
+Today I learned how to run Jenkins pipeline stages based on branches and parameter conditions.
+
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'ENVIRONMENT', defaultValue: 'dev', description: 'Deployment Environment')
+    }
+
+    environment {
+        INSTITUTE_NAME = "sohel"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/sohel/sample-java-app.git'
+            }
+        }
+
+        stage('Build') {
+            when {
+                branch 'main'
+            }
+            steps {
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage('Deploy') {
+            when {
+                expression { params.ENVIRONMENT == 'dev' }
+            }
+            steps {
+                sh 'echo "Deploying to $ENVIRONMENT by $INSTITUTE_NAME"'
+            }
+        }
+    }
+}
+
+GitLab CI — Conditional Jobs
+
+I also learned how to run GitLab CI jobs based on branches and environment variables.
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: maven:3.8.1-jdk-17
+  script:
+    - git clone https://github.com/sohel/sample-java-app.git
+    - cd sample-java-app
+    - mvn clean compile
+  only:
+    - main
+
+deploy:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "Deploying to $CI_ENVIRONMENT_NAME by sohel"
+  only:
+    variables:
+      - $CI_ENVIRONMENT_NAME == "dev"
+
+
+Today I practiced Ansible variables, Terraform VPC and subnet creation, Kubernetes liveness and readiness probes, shell loops, and conditional execution in Jenkins and GitLab CI.
