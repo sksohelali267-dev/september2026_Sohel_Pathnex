@@ -1,0 +1,102 @@
+
+# Day 20 — Debug Day
+
+## Ansible — playbook.yml
+
+```yaml
+- name: Install stuff
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install Apache
+      ansible.builtin.yum:
+        name: httpd
+        state: present
+```
+
+## Terraform — main.tf
+
+```hcl
+resource "aws_instance" "bad" {
+  ami           = "ami-123"
+  instance_type = "c6i.8xlarge"
+}
+```
+
+## Kubernetes — deployment.yaml
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: broken-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: broken
+  template:
+    metadata:
+      labels:
+        app: broken
+    spec:
+      containers:
+        - name: app
+          image: nginx
+```
+
+## Jenkins Pipeline — Jenkinsfile
+
+```groovy
+pipeline {
+    agent any
+
+    environment {
+        INSTITUTE_NAME = "Sohel"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/sohel/sample-java-app.git'
+            }
+        }
+
+        stage('Use Secret') {
+            steps {
+                withCredentials([
+                    string(
+                        credentialsId: 'SOHEL_API_KEY',
+                        variable: 'API_KEY'
+                    )
+                ]) {
+                    sh 'echo "Using secret for $INSTITUTE_NAME"'
+                }
+            }
+        }
+    }
+}
+```
+
+## GitLab CI/CD — .gitlab-ci.yml
+
+```yaml
+stages:
+  - build
+
+variables:
+  INSTITUTE_NAME: "Sohel"
+
+build:
+  stage: build
+  image: alpine:latest
+  script:
+    - echo "Building application for $INSTITUTE_NAME"
+    - |
+      if [ -z "$API_KEY" ]; then
+        echo "API_KEY is not configured"
+        exit 1
+      fi
+      echo "API key is configured"
+```
+
